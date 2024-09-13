@@ -21,7 +21,8 @@ client.on("ready", () => {
 
 client.on("messageCreate", async (message) => {
   //   console.log(message);
-  if (message.author.id !== KIANS_ID) return;
+  if (message.author.id !== KIANS_ID && message.channelId !== TESTING_CHANNEL_ID) return;
+  if (message.author.id === client.user.id) return;
 
   let conversationLog = [
     {
