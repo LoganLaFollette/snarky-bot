@@ -2,7 +2,7 @@ require("dotenv/config");
 const { Client, IntentsBitField } = require("discord.js");
 const { OpenAI } = require("openai");
 
-const KIANS_ID = "309905611297128449";
+const KIANS_ID = "696172599688036397";
 
 const aiClient = new OpenAI();
 
