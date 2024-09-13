@@ -3,6 +3,7 @@ const { Client, IntentsBitField } = require("discord.js");
 const { OpenAI } = require("openai");
 
 const KIANS_ID = "696172599688036397";
+const TESTING_CHANNEL_ID = "1283920357157503016";
 
 const aiClient = new OpenAI();
 
@@ -20,7 +21,8 @@ client.on("ready", () => {
 
 client.on("messageCreate", async (message) => {
   //   console.log(message);
-  if (message.author.id !== KIANS_ID) return;
+  
+  if (message.channelId !== TESTING_CHANNEL_ID && message.author.id !== KIANS_ID) return;
 
   let conversationLog = [
     {
